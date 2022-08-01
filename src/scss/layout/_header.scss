@@ -1,0 +1,209 @@
+@use '../base/variables.scss' as v;
+@use '../base/mixins.scss' as m;
+
+header{
+
+    
+    
+
+   position: relative;
+
+   .header__contenedor{
+        background-color: v.$negroFondo2;
+        padding: 2rem;
+   }
+
+   .ocultar {
+    display: none !important;
+   }
+   .header__descripcion{
+    
+
+    position: absolute;
+    z-index: 1;
+    
+    @include m.tablet {
+        top:20rem;
+        left:15rem;
+        width:45rem;
+    }
+
+    @include m.desktop {
+        top:25rem;
+        left:25rem;
+    }
+
+    top:35%;
+    left: 5%;
+
+    background-color: v.$negroFondo;
+    border-radius: 2rem;
+    width: 30rem;
+    padding: 3rem 0 3rem 2rem;
+
+   }
+
+    .header__barra{
+       
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+    }
+
+    .header__enlace--principal{
+        margin-right: 4rem;
+        font-size: 3.7rem;
+        color:v.$blanco;
+        font-weight: v.$black;
+        &:hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+
+    .header__video{
+        width: 100%;
+        display: block;
+       
+    }
+  
+
+}
+
+.header__descripcion{
+    p{
+        @include m.tablet {
+            font-size: 2.7rem;
+        }
+        font-size: 1.5rem;
+        color:v.$blanco;
+        font-weight: v.$black;
+        margin-left: 2rem;
+        
+        &:before{
+            content:'';
+            background-color: v.$blanco;
+            width: 0.5rem;
+            @include m.tablet {
+                height: 6rem;
+            }
+            height: 3rem;
+            display: block;
+            background-repeat: no-repeat;
+            rotate: y 90deg;
+            position: absolute;
+            left:2rem;
+            top:9rem;
+           
+        }
+        
+    }
+
+    h1{
+        font-size: 1.5rem;
+        color:v.$gris;
+ 
+    }
+
+    .flex{
+        margin-top: 2rem;
+        flex-direction: column;
+        gap:2rem;
+        @include m.tablet {
+            margin-top: 0;
+            flex-direction:row;
+        }
+    }
+
+    a{  
+        @include m.tablet {
+          margin-right: 1rem;
+          &:last-of-type{
+            margin-right: 0;
+            }
+        }
+      
+        margin-right: 2rem;
+    }
+
+}
+
+
+
+.header__enlace{
+    color:v.$blanco;
+    margin-right: 2rem;
+    font-size: 2rem;
+    font-weight: v.$black;
+
+    &:hover{
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    &:last-of-type{
+        margin-right: 0;
+    }
+}
+
+
+.header__menu{
+    display: flex;
+    flex-direction: column;
+
+
+
+
+    .mobile-menu{
+        display: block;
+        width: 5rem;
+
+
+        @include m.plus {
+            top:5rem;
+        }
+        @include m.tablet {
+            display: none;
+          
+        }
+        
+        &:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
+    
+        
+    }
+    
+    .header__navegacion{
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+        background-color: v.$negroFondo;
+        padding: 2rem 1rem;
+        position: absolute;
+        top:8rem;
+        z-index: 2;
+    
+        @include m.tablet {
+            position:inherit;
+            background-color: transparent;
+            padding: 0;
+            flex-direction:row;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    
+    
+    .mostrar{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+        
+
+

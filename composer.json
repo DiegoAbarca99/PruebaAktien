@@ -1,0 +1,18 @@
+{
+    "name": "diego/prueba-aktien",
+    "description": "Proyecto con SASS, JavaScript, MySQL y PHP",
+    "authors": [
+        {
+            "name": "DiegoAbarca99",
+            "email": "d.abarcarodriguez@ugto.mx"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\":"./classes"
+        }
+    }
+}

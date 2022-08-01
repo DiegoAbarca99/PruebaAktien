@@ -1,0 +1,51 @@
+@use'../base/variables' as v;
+@use'../base/mixins' as m;
+
+.webp .section{
+    background-image:url('../../../build/img/fondo.webp');
+}
+
+.no-webp .section{
+    background-image:url('../../../build/img/fondo.jpg') ;
+}
+
+.section{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15rem;
+}
+
+.section__contenido{
+    background-color: v.$negroFondo2;
+    width: 30rem;
+    @include m.telefono {
+        width: 50rem;
+    }
+    height: 37rem;
+    padding:3rem;
+    position: absolute;
+    right: 0;
+    bottom: -10rem;
+    .section__titulo{
+        color:v.$blanco;
+        font-weight: v.$black;
+
+        span{
+            color:v.$azul;
+        }
+    }
+
+    p{  
+        margin:1rem;
+        color:v.$blanco;
+    }
+
+    a{  display: inline-block;
+        margin:1rem;
+        color:v.$blanco;
+        text-decoration: underline;
+    }
+}

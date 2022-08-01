@@ -1,0 +1,11 @@
+@use '../base/variables.scss' as v;
+
+.footer{
+    background-color: v.$negroFondo2;
+    padding: 2rem;
+    .footer__copyright{
+        text-align: center;
+        color: v.$blanco;
+        font-weight: v.$black;
+    }
+}

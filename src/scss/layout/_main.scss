@@ -1,0 +1,51 @@
+@use '../base/mixins.scss' as m;
+@use '../base/variables.scss' as v;
+
+
+.main{
+    margin-top: 5rem;
+   .main__contenedor{
+        display: grid;
+        grid-auto-columns: auto;
+
+        @include m.tablet {
+            @include m.grid(2,5rem);
+        }
+
+   }
+}
+
+.main__imagen{
+    @include m.tablet {
+        grid-column: 2/3;
+    }
+}
+
+.main__contenido{
+   grid-row: 2/3;
+   @include m.tablet {
+    grid-row: 1/2;
+    margin-top: 5rem;
+   }
+    margin-top: 2rem;
+    .main__parrafo{
+        margin: 0;
+        font-size: 3rem;
+        font-weight: v.$black;
+        width: 45rem;
+    }
+}
+
+.main__lista{
+ 
+    .elemento{
+        color:lighten($color: v.$grisOscuro, $amount: 30%);
+    }
+
+
+}
+
+.elemento--resaltado{
+    font-size: 1.5rem;
+    color:v.$grisOscuro;
+}

@@ -1,0 +1,57 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.main--nosotros{
+
+    .main__contenedor{
+
+
+        margin-top: 5rem;
+        display:flex;
+        flex-direction: column;
+
+        @include m.desktop {
+            flex-direction: row;
+            gap: 2rem;
+         }
+
+        .main__imagen{
+            flex: 1;
+        }
+
+        .main__contenido{
+            flex:1;
+
+         }
+
+        .texto-chico:after{
+            content: '';
+            display: block;
+            height: .3rem;
+            background-color: v.$gris;
+            margin-top:1rem;
+        }
+
+         h2{
+            text-align: start;
+        }
+       
+        .resaltar-texto{
+            font-size: 3rem;
+         }
+    
+    }
+
+    .main__listas{
+        display: flex;
+        gap: 2rem;
+        ul{
+            list-style: none;
+            li{
+                margin-bottom: 2rem;
+            }
+        }   
+
+    }
+
+}

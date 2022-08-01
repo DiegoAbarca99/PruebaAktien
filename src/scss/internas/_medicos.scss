@@ -1,0 +1,58 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.medicos{
+    @include m.telefono {
+        @include m.grid(2,1rem);
+    }
+
+    @include m.tablet {
+        @include m.grid(3,2rem);
+    }
+
+    margin:5rem 0;
+  
+}
+
+.medicos__elemento{
+    position: relative;
+    margin-bottom: 2rem;
+    
+    @include m.telefono {
+        margin-bottom: 0;
+    }
+
+    form,a{
+        position: absolute;
+    }
+    a{
+        top:-1rem;
+        right: -2rem;
+
+    }
+    form{
+        bottom:7rem;
+        left:-2rem;
+    }
+
+
+    .medicos__contenido{
+    
+        background-color: v.$negroFondo2;
+        padding: 2rem;
+        p{
+            margin:0;
+            color:v.$blanco;
+            text-align: center;
+            font-size: 1.5rem;
+            span{
+                font-weight: v.$bold;
+            }
+        }
+            
+        
+    }
+
+
+}
+

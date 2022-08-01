@@ -1,0 +1,95 @@
+@use '../base/variables.scss' as v;
+@use '../base/mixins.scss' as m;
+
+
+.formulario{
+    background-color: v.$gris;
+
+    .formulario__contenedor{
+        display: flex;
+        flex-direction: column;
+        @include m.desktop {
+            flex-direction: row;
+        }
+    }
+}
+
+.formulario__azul{
+    flex:1;
+    padding: 5rem 2rem 10rem 0rem;
+    background-color: v.$azul;
+   
+    .formulario__titulo, p, a{
+        color:v.$blanco;
+        @include m.telefono {
+            margin-left: 2rem;
+            padding-left: 2rem;
+        }
+        margin-left: 0;
+        text-align: start;
+    }
+
+
+    .resaltar-texto{
+        width: 41rem;
+    }
+
+    p{
+        margin-bottom: 0;
+    }
+
+    a{
+        text-decoration: underline;
+    }
+ 
+}
+
+.formulario__form{
+    padding: 2rem;
+    flex:2;
+    label{
+        font-weight: v.$black;
+    }
+
+   
+    input:not(.submit),select{
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid v.$grisOscuro;
+    }
+
+    .submit{
+        display:inline-block;
+        margin-left: 2rem;
+    }
+
+
+    .campo:first-of-type,.campo:nth-child(2){
+        margin-top: 2rem;
+    }
+
+
+    .texto-gris{
+        margin-left: 2rem;
+    }
+
+}
+
+.contenedor-campos{
+    @include m.desktop {
+       
+        @include m.grid(2,2rem);
+        
+    }
+
+    .campo{
+        @include m.desktop {
+            margin-bottom:0;
+        }
+        margin-bottom: 4rem;
+    }
+
+}

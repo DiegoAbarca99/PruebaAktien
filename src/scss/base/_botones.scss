@@ -1,0 +1,25 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+
+.btn-transparente{
+    @include m.boton(transparent,v.$blanco,v.$blanco,v.$azul,inline-block);
+    
+}
+
+.btn-azul{
+    @include m.boton(v.$blanco,v.$azul,v.$azul,v.$blanco,inline-block);
+}
+
+.btn-amarillo{
+    @include m.boton(v.$amarilloOscuro,v.$amarillo,v.$blanco,v.$blanco,inline-block);
+}
+
+.btn-verde{
+    @include m.boton(v.$verde,v.$verdeOscuro,v.$blanco,v.$blanco,inline);
+
+}
+.btn-rojo{
+    @include m.boton(v.$rojoOscuro,v.$rojo,v.$blanco,v.$blanco,inline-block);
+
+}

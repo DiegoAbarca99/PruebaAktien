@@ -1,0 +1,81 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    overflow-x: hidden;
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+}
+p { 
+    color: v.$negro;
+    font-size: 2rem;
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: v.$fuente_principal;
+    font-weight: v.$black;
+    
+}
+
+h1{
+    font-size: 2.5rem;
+    color: v.$azul;
+}
+
+h2{
+    color: v.$azul;
+    font-size: 2.2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+   
+
+.resaltar-texto{
+    margin-top: 0;
+    font-size: 4rem;
+    font-weight: v.$bold;
+    color: v.$black;
+}
+
+.texto-gris{
+    color:  darken($color: v.$gris, $amount: 50%);
+}
+
+.texto-chico{
+
+    font-size: 1.5rem;
+    text-align: start;
+    color:v.$grisOscuro;
+    font-weight: v.$black;
+    margin-bottom: 1rem;
+      
+
+}
+
+.flex{
+    display: flex;
+}
+
